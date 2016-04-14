@@ -132,6 +132,7 @@ def fix_url(bibs):
             entry.fields['url'] = entry.fields['url'].replace(r'{\_}', '_')
             entry.fields['url'] = entry.fields['url'].replace(r'\_', '_')
             entry.fields['url'] = entry.fields['url'].replace(r'{\&}', '&')
+            entry.fields['url'] = entry.fields['url'].replace(r'{~}', '~')
             if ' http' in entry.fields['url']:
                 entry.fields['url'] = entry.fields['url'].replace(' http', '| http')
 
